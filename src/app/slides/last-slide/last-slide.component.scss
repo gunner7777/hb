@@ -1,0 +1,68 @@
+@use '../../../assets/style/keyframes' as animation;
+
+.last-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%;
+   width: 100%;*/
+  //margin: 0;
+  height: 100%;
+  overflow-y: auto;
+
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    //overflow-y: auto;
+    margin: auto;
+  }
+
+  /*  &__text {
+      p {
+        line-height: 1.5rem;
+      }
+    }*/
+
+  &__img {
+    width: 60%;
+
+    &_tada-animation {
+      animation: tada 1s ease-in-out;
+    }
+  }
+}
+@include animation.tada-animation;
+
+/*
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+*/

@@ -1,0 +1,17 @@
+<div class="grats-book">
+  <div class="grats-book__inner">
+    <div class="grats-book__text">
+      <p>Книга очень универсальная штука. Вот два из многих вариантов ее употребления:</p>
+      <p>1. Можно сесть поудобнее, поставить перед собой кружечку глинтвейна, завернуться в мягкий плед и получить
+        удовольствие от чтения</p>
+      <p>2. Книга также является очень хорошим аргументом для убеждения и успокоения оппонента</p>
+    </div>
+    <button bfa-button #exampleButton (click)="showImg()">
+      Показать пример убеждения
+    </button>
+    <div class="grats-book__img" *ngIf="imgShow">
+      <img src="/assets/images/book_usage.gif" alt="">
+    </div>
+  </div>
+</div>
+

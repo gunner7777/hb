@@ -1,0 +1,8 @@
+.content {
+  display: grid;
+  grid-template-rows: 1fr;
+  height: calc(100vh - 151px);
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}

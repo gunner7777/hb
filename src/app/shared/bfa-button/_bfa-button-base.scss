@@ -1,0 +1,68 @@
+@use '../../../assets/style/mixins' as mx;
+
+$margin: 0 !default;
+$padding: 0 16px !default;
+$min-width: 60px !default;
+$line-height: 36px !default;
+$border-radius: 10px !default;
+$icon-button-size: 30px !default;
+$opacity: 1 !default;
+$transition: opacity .3s ease-out !default;
+
+@mixin base {
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  margin: $margin;
+  padding: $padding;
+  min-width: $min-width;
+  line-height: $line-height;
+  border-radius: var(--border-radius, $border-radius);
+  transition: $transition;
+  font-weight: 500;
+  font-size: 1rem;
+  @include mx.box-shadow;
+
+  &:not(.bfa-button-disabled):hover {
+    opacity: calc(#{$opacity} - .15);
+  }
+
+  &__inner {
+    line-height: 24px;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+
+    & > * {
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin button-disabled {
+  cursor: default;
+  opacity: 0.7;
+  color: var(--secondary-accent);
+}
+
+@mixin flat-button {
+  @include base;
+  @include button-disabled;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+@mixin icon-button($size) {
+  @include button-disabled;
+  width: $size;
+  height: $size;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}

@@ -1,0 +1,39 @@
+@use '../../../assets/style/keyframes' as animation;
+
+.header {
+  height: 50px;
+  margin-bottom: 25px;
+  padding-top: 15px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--primary-accent);
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+@include animation.pulse-animation;
+
+/*@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}*/

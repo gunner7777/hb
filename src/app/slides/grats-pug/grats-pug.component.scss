@@ -1,0 +1,112 @@
+@use '../../../assets/style/keyframes' as animation;
+
+.grats-pug {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;*/
+  height: 100%;
+  overflow-y: auto;
+
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    //overflow-y: auto;
+    //margin: auto;
+  }
+
+  &__text {
+    animation: fadeInDown .3s ease-in-out;
+  }
+
+  &__img {
+    margin-top: 15px;
+    width: 75%;
+    text-align: center;
+    animation: headShake 1s 3 forwards ease-in-out;
+
+    &_grats {
+      animation: shakeY 1.3s 3 forwards ease-in-out;
+    }
+  }
+}
+
+@include animation.fadeInDown-animation;
+@include animation.headShake-animation;
+@include animation.shakeY-animation;
+
+@media screen and (min-width: 450px) {
+  .grats-pug {
+    &__img {
+      img {
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+/*@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}*/
+
+/*@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}*/
+
+/*@keyframes shakeY {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(0, 3px, 0);
+  }
+}*/

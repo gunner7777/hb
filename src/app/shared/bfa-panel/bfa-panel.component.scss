@@ -1,0 +1,29 @@
+@use '../../../assets/style/mixins' as mx;
+$border-radius: 10px;
+
+.bfa-panel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 151px);
+  padding: 15px;
+  border-radius: var(--border-radius, $border-radius);
+  background-color: var(--secondary-bg);
+  overflow-y: auto;
+  @include mx.box-shadow;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+      content: "1";
+      opacity: 0;
+    }
+  }
+
+  &_not-fixed-height {
+    height: auto;
+  }
+}

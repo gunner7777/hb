@@ -1,0 +1,31 @@
+@use './bfa-button-base' as base;
+
+.bfa-button {
+  @include base.base;
+  background-color: var(--secondary-bg);
+  color: var(--primary-accent);
+
+  &[disabled] {
+    @include base.button-disabled;
+  }
+}
+
+.bfa-flat-button {
+  @include base.flat-button;
+  background-color: var(--secondary-bg);
+  color: var(--primary-accent);
+
+  &[disabled] {
+    color: var(--secondary-accent);
+  }
+}
+
+.bfa-icon-button {
+  @include base.icon-button(base.$icon-button-size);
+  background-color: var(--secondary-bg);
+  color: var(--primary-accent);
+
+  &[disabled] {
+    color: var(--secondary-accent);
+  }
+}

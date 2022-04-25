@@ -1,0 +1,17 @@
+<div class="last-slide">
+  <div class="last-slide__inner">
+    <div>
+      <!--<p class="action-title">Еще раз с Днем Рождения!</p>-->
+      <app-bfa-action-title>Еще раз с Днем Рождения! ;)</app-bfa-action-title>
+    </div>
+    <div
+      class="last-slide__img"
+      #bluewhale
+      (click)="animateImg()">
+      <img src="/assets/images/blue_whale.png" alt="синий кит">
+    </div>
+    <button bfa-button (click)="restartGrats()">
+      В начало
+    </button>
+  </div>
+</div>

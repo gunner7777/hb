@@ -1,0 +1,45 @@
+@use '../../../assets/style/keyframes' as animation;
+
+.not-found {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;*/
+  height: 100%;
+  overflow-y: auto;
+
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    //overflow-y: auto;
+    //margin: auto;
+  }
+
+  /*  &__text {
+      p {
+        line-height: 1.5rem;
+      }
+    }*/
+
+  &__img {
+    width: 70%;
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@include animation.fadeIn-animation;
+
+/*@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}*/

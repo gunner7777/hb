@@ -1,0 +1,11 @@
+.action-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+
+  &_hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

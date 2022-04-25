@@ -1,0 +1,32 @@
+<div class="grats-pug">
+  <div class="grats-pug__inner">
+    <div class="grats-pug__text fadeInUp" *ngIf="textShow">
+      <app-bfa-panel [nfheight]="true">
+        <!--<p class="bfa-hb-text">
+          <span>Гав-гав-гав-гав-гав-гав!! </span>
+          <span>Гав-гав-гав-гав-гав-гав!! </span>
+          <span>С Днем Рождения </span>
+          <span>от мордочек всех мопсиков мира! </span>
+          <span>Троекратное УРА-УРА-УРА!!! </span>
+          <span>Гав-гав-гав-гав-гав-гав!! </span>
+        </p>-->
+        <p app-bfa-hb-text>
+          <span>Гав-гав-гав-гав-гав-гав!!&nbsp;</span>
+          <span>Гав-гав-гав-гав-гав-гав!!&nbsp;</span>
+          <span>С Днем Рождения&nbsp;</span>
+          <span>от мордочек всех мопсиков мира!&nbsp;</span>
+          <span>Троекратное УРА-УРА-УРА!!!&nbsp;</span>
+          <span>Гав-гав-гав-гав-гав-гав!!</span>
+        </p>
+      </app-bfa-panel>
+    </div>
+    <div
+      #pug
+      class="grats-pug__img"
+      (click)="showText()">
+      <img src="/assets/images/pug01.png" alt="мопсик Борис">
+    </div>
+    <!--<p class="action-title">Поцелуй в носик мопсика Бориса!!</p>-->
+    <app-bfa-action-title>Поцелуй в носик мопсика Бориса!!</app-bfa-action-title>
+  </div>
+</div>
